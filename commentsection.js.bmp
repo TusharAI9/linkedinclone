@@ -1,0 +1,43 @@
+import React from 'react';
+
+const features = [
+  {
+    title: 'User Authentication',
+    description: 'Secure login and registration system using JWT and OAuth2.',
+    icon: '🔒',
+  },
+  {
+    title: 'Real-time Chat',
+    description: 'Communicate instantly with built-in real-time messaging.',
+    icon: '💬',
+  },
+  {
+    title: 'Profile Management',
+    description: 'Users can update their information and manage settings.',
+    icon: '👤',
+  },
+  {
+    title: 'Analytics Dashboard',
+    description: 'Visualize performance and user metrics in real-time.',
+    icon: '📊',
+  },
+];
+
+const ComponentSection = () => {
+  return (
+    <section className="bg-gray-100 py-12 px-4 md:px-16">
+      <h2 className="text-3xl font-bold text-center mb-10">Key Features</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {features.map((feature, index) => (
+          <div key={index} className="bg-white shadow-md rounded-2xl p-6 text-center hover:shadow-lg transition-shadow duration-300">
+            <div className="text-5xl mb-4">{feature.icon}</div>
+            <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+            <p className="text-gray-600">{feature.description}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export default ComponentSection;
